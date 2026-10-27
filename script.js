@@ -289,9 +289,9 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   'Nishanth S.': { linkedin: 'https://www.linkedin.com/in/nishanth-s-4690203a8 ', github: '#' },
   'Sanchitha S.': { linkedin: '#', github: '#' },
   'Vineet J.': { linkedin: 'https://www.linkedin.com/in/vineeth-jagadeesh-140674387 ', github: '#' },
-  'Kripa Singh': { linkedin: 'https://www.linkedin.com/in/kripa-singh-524175385 ', github: '#' },
+  'Kripa Singh': { linkedin: 'https://www.linkedin.com/in/kripa-singh-524175385 ', github: 'https://github.com/kripasingh18' },
   'Sai Sathwik N. Urs': { linkedin: 'https://www.linkedin.com/in/sai-satvik-n-urs-b2934b3a0', github: '#' },
-  'Likhitha R.': { linkedin: 'https://www.linkedin.com/in/likhitha-r-258432383 ', github: '#' },
+  'Likhitha R.': { linkedin: 'https://www.linkedin.com/in/likhitha-r-258432383 ', github: 'https://github.com/likhithar17' },
 
   'Varsha': { linkedin: '#', github: '#' },
   'Siri': { linkedin: '#', github: '#' },
