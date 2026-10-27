@@ -255,37 +255,30 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  /* ==========  SMOOTH SCROLL FOR ANCHOR LINKS  ========== */
-  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', (e) => {
+ 
+/* ========== SMOOTH SCROLL FOR ANCHOR LINKS ========== */
+
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', (e) => {
+    const href = anchor.getAttribute('href');
+
+    // Ignore placeholder links such as href="#"
+    if (!href || href === '#') return;
+
+    const target = document.querySelector(href);
+
+    // Only intercept links that point to an element on this page
+    if (target) {
       e.preventDefault();
-      const target = document.querySelector(anchor.getAttribute('href'));
-      if (target) {
-        const offsetTop = target.offsetTop - 70; // Account for navbar
-        window.scrollTo({ top: offsetTop, behavior: 'smooth' });
-      }
-    });
-  });
 
-  /* ==========  ACTIVE NAV LINK HIGHLIGHT  ========== */
-  const sections = document.querySelectorAll('section');
-  const navItems = document.querySelectorAll('.nav-links a');
-
-  window.addEventListener('scroll', () => {
-    let current = '';
-    sections.forEach(section => {
-      const sectionTop = section.offsetTop - 120;
-      if (window.scrollY >= sectionTop) {
-        current = section.getAttribute('id');
-      }
-    });
-    navItems.forEach(link => {
-      link.style.color = '';
-      if (link.getAttribute('href') === `#${current}`) {
-        link.style.color = '#DDF0FF';
-      }
-    });
+      const offsetTop = target.offsetTop - 70;
+      window.scrollTo({
+        top: offsetTop,
+        behavior: 'smooth'
+      });
+    }
   });
+});
 
   /* ==========  TEAM CARD SOCIAL LINKS  ========== */
   const linkedinSVG = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>';
@@ -293,26 +286,27 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Social data — replace '#' with actual profile URLs
   const teamSocials = {
-    'Nishanth.S':              { linkedin: '#', github: '#' },
-    'Sanchitha.S':             { linkedin: '#', github: '#' },
-    'Vineet.J':                { linkedin: '#', github: '#' },
-    'Varsha':                  { linkedin: '#', github: '#' },
-    'Siri':                    { linkedin: '#', github: '#' },
-    'Spoorthy':                { linkedin: '#', github: '#' },
-    'Sukanya':                 { linkedin: '#', github: '#' },
-    'Kripa Singh':             { linkedin: '#', github: '#' },
-    'Sai Sathwik.N.Urs':       { linkedin: '#', github: '#' },
-    'Likitha.R':               { linkedin: '#', github: '#' },
-    'Shreeveera':              { linkedin: '#', github: '#' },
-    'Shree Laksmi.M':          { linkedin: '#', github: '#' },
-    'Thejaswi Bharadwaj.S':    { linkedin: '#', github: '#' },
-    'Avishkaa.R':              { linkedin: '#', github: '#' },
-    'Rohan.J':                 { linkedin: '#', github: '#' },
-    'Varshitha.H.D':           { linkedin: '#', github: '#' },
-    'Suhas.K':                 { linkedin: '#', github: '#' },
-    'Sai Gagan.C':             { linkedin: '#', github: '#' },
-    'Ninaad':                  { linkedin: '#', github: '#' },
-    'Poorvi suma':             { linkedin: '#', github: '#' }
+  'Nishanth S.': { linkedin: '#', github: '#' },
+  'Sanchitha S.': { linkedin: '#', github: '#' },
+  'Vineet J.': { linkedin: '#', github: '#' },
+  'Kripa Singh': { linkedin: '#', github: '#' },
+  'Sai Sathwik N. Urs': { linkedin: '#', github: '#' },
+  'Likhitha R.': { linkedin: '#', github: '#' },
+
+  'Varsha': { linkedin: '#', github: '#' },
+  'Siri': { linkedin: '#', github: '#' },
+  'Spoorthy': { linkedin: '#', github: '#' },
+  'Sukanya': { linkedin: '#', github: '#' },
+  'Shreeveera': { linkedin: '#', github: '#' },
+  'Shree Laksmi M.': { linkedin: '#', github: '#' },
+  'Thejaswi Bharadwaj S.': { linkedin: '#', github: '#' },
+  'Avishkaa R.': { linkedin: '#', github: '#' },
+  'Rohan J.': { linkedin: '#', github: '#' },
+  'Varshitha H. D.': { linkedin: '#', github: '#' },
+  'Suhas K.': { linkedin: '#', github: '#' },
+  'Sai Gagan C.': { linkedin: '#', github: '#' },
+  'Ninaad': { linkedin: '#', github: '#' },
+  'Poorvi Suma': { linkedin: '#', github: '#' }
 };
   document.querySelectorAll('.team-card').forEach(card => {
     const name = card.querySelector('h4')?.textContent.trim();
