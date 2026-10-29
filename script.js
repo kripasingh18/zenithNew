@@ -290,7 +290,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   'Sanchitha S.': { linkedin: '#', github: '#' },
   'Vineet J.': { linkedin: 'https://www.linkedin.com/in/vineeth-jagadeesh-140674387 ', github: '#' },
   'Kripa Singh': { linkedin: 'https://www.linkedin.com/in/kripa-singh-524175385 ', github: 'https://github.com/kripasingh18' },
-  'Sai Sathwik N. Urs': { linkedin: 'https://www.linkedin.com/in/sai-satvik-n-urs-b2934b3a0', github: '#' },
+  'Sai Sathvik N Urs': { linkedin: 'https://www.linkedin.com/in/sai-satvik-n-urs-b2934b3a0', github: '#' },
   'Likhitha R.': { linkedin: 'https://www.linkedin.com/in/likhitha-r-258432383 ', github: 'https://github.com/likhithar17' },
 
   'Varsha': { linkedin: '#', github: '#' },
@@ -300,7 +300,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   'Shreeveera': { linkedin: '#', github: '#' },
   'Shree Laksmi M.': { linkedin: '#', github: '#' },
   'Thejaswi Bharadwaj S.': { linkedin: '#', github: '#' },
-  'Avishkaa R.': { linkedin: '#', github: '#' },
+  'Avishka R.': { linkedin: 'https://www.linkedin.com/in/avishka-r-b09061391', github: 'https://github.com/avishkar2606' },
   'Rohan J.': { linkedin: '#', github: '#' },
   'Varshitha H. D.': { linkedin: '#', github: '#' },
   'Suhas K.': { linkedin: '#', github: '#' },
