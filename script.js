@@ -300,7 +300,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   'Shreeveera': { linkedin: '#', github: '#' },
   'Shree Laksmi M.': { linkedin: '#', github: '#' },
   'Thejaswi Bharadwaj S.': { linkedin: '#', github: '#' },
-  'Avishka R.': { linkedin: 'https://www.linkedin.com/in/avishka-r-b09061391', github: 'https://github.com/avishkar2606' },
+  'Avishka R': { linkedin: 'https://www.linkedin.com/in/avishka-r-b09061391', github: 'https://github.com/avishkar2606' },
   'Rohan J.': { linkedin: '#', github: '#' },
   'Varshitha H. D.': { linkedin: '#', github: '#' },
   'Suhas K.': { linkedin: '#', github: '#' },
